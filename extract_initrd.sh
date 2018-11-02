@@ -63,7 +63,7 @@ while true; do
         (cpio -idmv; cat > "${trailer}") < "${PROCESS_FILE}"
         popd
     else
-        GZIP_LEN=$("${SCRIPT_DIR}/gzip_length" "${PROCESS_FILE}")
+        GZIP_LEN=$("${SCRIPT_DIR}/gzip-length" "${PROCESS_FILE}")
         dd "if=${PROCESS_FILE}" "of=${trailer}" bs=1 "skip=$(python -c "print(${GZIP_LEN} + (4 - (${GZIP_LEN} % 4)))")"
 
         ORIG_PROCESS_FILE="${PROCESS_FILE}"
