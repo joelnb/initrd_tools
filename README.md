@@ -1,6 +1,6 @@
 # initrd tools
 
-Some golang tools for working with initrd files. An example script using the available tools is provided which should be capable of extracting any initrd and reconstructing it (most likely with some changes).
+Some golang tools for working with initrd files. An example script using the available tools is provided which should be capable of extracting any (gzipped) initrd and reconstructing it (most likely with some changes).
 
 ## gunzip_trailer
 
