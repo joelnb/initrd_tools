@@ -75,6 +75,7 @@ while true; do
         popd
     fi
 
-    ITERATION=$((ITERATION + 1))
     PROCESS_FILE="${trailer}"
+
+    (( ITERATION++ ))
 done
