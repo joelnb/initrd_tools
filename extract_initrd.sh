@@ -53,6 +53,7 @@ while true; do
     mkdir -p "${OUTDIR}/${ITERATION}"
     echo_verbose "Processing iteration ${ITERATION} in: ${OUTDIR}/${ITERATION}"
     trailer="$(mktemp)"
+    echo_verbose "Using temporary file ${trailer} for any trailing data"
 
     if [ "$(file -bL "${PROCESS_FILE}")" = "empty" ]; then
         rm -rf "${OUTDIR:?}/${ITERATION}"
